@@ -8,9 +8,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Airlock\HasApiTokens;
 use Laravel\Cashier\Billable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, Notifiable, MustVerifyEmail, Billable;
+    use HasApiTokens, Notifiable, Billable;
 
     /**
      * The attributes that are mass assignable.
