@@ -1,0 +1,18 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nunito:200,600&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined');
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
