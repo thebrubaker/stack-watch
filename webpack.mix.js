@@ -11,7 +11,7 @@ const mix = require('laravel-mix')
  |
  */
 
-mix.browserSync('127.0.0.1:8000')
+mix.browserSync(process.env.APP_URL)
 
 /*
  |--------------------------------------------------------------------------
@@ -22,6 +22,10 @@ mix.browserSync('127.0.0.1:8000')
  | for your Laravel application. By default, we are compiling the Sass
  | file for the application as well as bundling up all the JS files.
  |
+ */
+
+/**
+ * AutoPrefixer Handled by PostCSS Plugin
  */
 mix.options({
   autoprefixer: false,
@@ -35,8 +39,14 @@ mix.webpackConfig({
   },
 })
 
+/**
+ * JavaScript Bundle
+ */
 mix.js('resources/js/app.js', 'public/js')
 
+/**
+ * Stylesheets / Tailwind via PostCSS
+ */
 mix.postCss('resources/css/app.css', 'public/css', [
   require('postcss-import'),
   require('tailwindcss'),
@@ -44,6 +54,9 @@ mix.postCss('resources/css/app.css', 'public/css', [
   require('autoprefixer'),
 ])
 
+/**
+ * Environment Setup
+ */
 if (mix.inProduction()) {
   mix.version()
 } else {
