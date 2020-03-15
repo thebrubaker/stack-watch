@@ -5,7 +5,7 @@
 @section('content')
 <div class="min-h-screen bg-white flex">
     <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-48">
-        <div class="mx-auto w-full max-w-sm">
+        <div class="mx-auto w-full max-w-sm" style="min-width: 350px;">
             <div>
                 {{-- <img class="h-12 w-auto" src="/img/logos/workflow-mark-on-white.svg" alt="Workflow" /> --}}
                 <h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
@@ -75,7 +75,7 @@
                             <label for="name" class="block text-sm font-medium leading-5 text-gray-700">
                                 Name
                             </label>
-                            <div class="mt-1 rounded-md shadow-sm">
+                            <div class="mt-1 rounded-md shadow-sm relative">
                                 <input id="name" type="name" name="name" required autocomplete="name"
                                     value="{{ old('name') }}"
                                     class="@error('name') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
@@ -98,7 +98,7 @@
                             <label for="email" class="block text-sm font-medium leading-5 text-gray-700">
                                 Email address
                             </label>
-                            <div class="mt-1 rounded-md shadow-sm">
+                            <div class="mt-1 rounded-md shadow-sm relative">
                                 <input id="email" type="email" name="email" required autocomplete="email"
                                     value="{{ old('email') }}"
                                     class="@error('email') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
@@ -121,7 +121,7 @@
                             <label for="password" class="block text-sm font-medium leading-5 text-gray-700">
                                 Password
                             </label>
-                            <div class="mt-1 rounded-md shadow-sm">
+                            <div class="mt-1 rounded-md shadow-sm relative">
                                 <input id="password" type="password" name="password" required
                                     autocomplete="new-password"
                                     class="@error('password') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
@@ -144,7 +144,7 @@
                             <label for="confirm-password" class="block text-sm font-medium leading-5 text-gray-700">
                                 Confirm Password
                             </label>
-                            <div class="mt-1 rounded-md shadow-sm">
+                            <div class="mt-1 rounded-md shadow-sm relative">
                                 <input id="confirm-password" type="password" name="password_confirmation"
                                     autocomplete="new-password"
                                     class="@error('password_confirmation') border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:shadow-outline-red @enderror appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
