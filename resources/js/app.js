@@ -4,9 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap')
+require('vue2-animate/dist/vue2-animate.min.css')
+import Vue from 'vue'
+import ApplicationShell from './ApplicationShell'
+import vClickOutside from 'v-click-outside'
 
-window.Vue = require('vue')
+Vue.use(vClickOutside)
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +22,7 @@ window.Vue = require('vue')
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-window.Vue.component(
+Vue.component(
   'example-component',
   require('./components/ExampleComponent.vue').default
 )
@@ -30,6 +33,9 @@ window.Vue.component(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-window.app = new window.Vue({
+window.app = new Vue({
   el: '#app',
+  render(h) {
+    return h(ApplicationShell)
+  },
 })
